@@ -1,0 +1,10 @@
+.root {
+	&[data-variant="label"] {
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&[data-variant="display"] {
+		font-size: 1.2rem;
+	}
+}

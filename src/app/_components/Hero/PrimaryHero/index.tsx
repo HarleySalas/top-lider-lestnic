@@ -1,0 +1,1 @@
+export { PrimaryHero } from "./PrimaryHero";

@@ -1,0 +1,6 @@
+.root {
+  text-transform: uppercase;
+  color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-2));
+  letter-spacing: 0.24pt;
+  overflow-wrap: break-word;
+}

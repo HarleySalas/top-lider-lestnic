@@ -1,0 +1,48 @@
+.aspectRatio {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--mantine-radius-xs);
+}
+
+.button {
+  background-color: var(--mantine-color-gray-1);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.01);
+  transition: transform 0.24s $ease-out-quint;
+}
+
+.button:hover .image {
+  transform: scale(1.04);
+  transition: transform 0.42s $ease-out-quint;
+}
+
+.closeButton {
+  position: absolute;
+  color: var(--mantine-color-gray-2);
+  transition: color 0.18s $ease-out-quint;
+  z-index: 5;
+
+  @mixin hover {
+    color: var(--mantine-color-white);
+  }
+}
+
+.controlWrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.control {
+  color: var(--mantine-color-gray-2);
+
+  @mixin hover {
+    color: var(--mantine-color-white);
+  }
+}

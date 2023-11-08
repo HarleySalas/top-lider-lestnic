@@ -1,0 +1,12 @@
+.number {
+  background-color: var(--mantine-color-brandPrimary-6);
+  /* color: var(--mantine-color-dark-7); */
+  margin: 0 auto;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  line-height: 1;
+}

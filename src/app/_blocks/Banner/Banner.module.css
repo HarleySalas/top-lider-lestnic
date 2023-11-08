@@ -1,0 +1,12 @@
+.root {
+}
+
+.bgBrandPrimary {
+  background-color: var(--mantine-color-brandPrimary-6);
+  color: var(--mantine-color-dark-6);
+}
+
+.bgDark {
+  /* background-color: var(--mantine-color-dark-9);
+  color: var(--mantine-color-gray-0); */
+}

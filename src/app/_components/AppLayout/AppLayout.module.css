@@ -1,0 +1,45 @@
+.header {
+  /* position: relative; */
+  background-color: var(--mantine-color-dark-9);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -2rem;
+    width: 2rem;
+    height: 100%;
+    background-color: var(--mantine-color-dark-9);
+  }
+}
+
+.navbar {
+  background-color: var(--mantine-color-dark-9);
+}
+
+.logoLink {
+  display: block;
+  position: relative;
+  height: 2rem;
+}
+
+.logo {
+  height: 100%;
+  display: block;
+  fill: var(--mantine-color-gray-0);
+}
+
+.control {
+  color: var(--mantine-color-gray-2);
+  display: block;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  font-weight: 400;
+  letter-spacing: rem(0.5px);
+  font-size: rem(14px);
+  text-transform: uppercase;
+
+  @mixin hover {
+    background-color: var(--mantine-color-dark-8);
+  }
+}

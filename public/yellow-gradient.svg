@@ -1,0 +1,22 @@
+<svg id="gradientsvg" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="blur1" x="-140" y="-140" width="100%" height="100%" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFIx" result="shape"></feBlend>
+        <feGaussianBlur stdDeviation="60" result="effect1_backgroundBlur"></feGaussianBlur>
+        </filter>
+      </defs>
+      <rect id="gradientrectangle" width="100%" height="100%" fill="#201600"></rect>
+      <g filter="url(#blur1)">
+       <ellipse id="gradientcircle1" cx="20%" cy="10%" rx="12.0417%" ry="12.6987%" fill="#7c5800"></ellipse>
+    <ellipse id="gradientcircle2" cx="10%" cy="18.6761%" rx="13.0222%" ry="9.6328%" fill="#d89900"></ellipse>
+    <ellipse id="gradientcircle3" cx="38.3998%" cy="18.0778%" rx="8.87129%" ry="13.2901%" fill="#ffc22e"></ellipse>
+    <ellipse id="gradientcircle4" cx="33.9594%" cy="2.07117%" rx="13.5185%" ry="10.104%" fill="#ffdd8a"></ellipse>
+    <ellipse id="gradientcircle5" cx="4.31501%" cy="2.74813%" rx="12.2634%" ry="11.5647%" fill="#fffbf1"></ellipse>
+      <!-- <ellipse id="gradientcircle1" cx="180" cy="100" rx="120.417" ry="126.987" fill="#7c5800"></ellipse>
+      <ellipse id="gradientcircle2" cx="93.0055" cy="186.761" rx="130.222" ry="96.328" fill="#d89900"></ellipse>
+      <ellipse id="gradientcircle3" cx="383.998" cy="180.778" rx="88.7129" ry="132.901" fill="#ffc22e"></ellipse>
+      <ellipse id="gradientcircle4" cx="339.594" cy="20.7117" rx="135.185" ry="101.04" fill="#ffdd8a"></ellipse>
+      <ellipse id="gradientcircle5" cx="43.1501" cy="27.4813" rx="122.634" ry="115.647" fill="#fffbf1"></ellipse> -->
+      </g>
+    </svg>

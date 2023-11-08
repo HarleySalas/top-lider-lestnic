@@ -1,0 +1,1 @@
+export { DefaultHero } from "./DefaultHero";

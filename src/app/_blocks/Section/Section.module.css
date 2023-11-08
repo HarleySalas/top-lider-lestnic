@@ -1,0 +1,15 @@
+.root {
+}
+
+.background {
+  /* background-color: light-dark(
+    var(--mantine-color-white),
+    var(--mantine-color-dark-9)
+  );
+  color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0)); */
+  padding: 5rem 0;
+}
+
+.graySection {
+  background-color: var(--mantine-color-gray-1);
+}

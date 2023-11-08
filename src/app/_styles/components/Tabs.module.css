@@ -1,0 +1,19 @@
+.tab {
+  box-shadow: light-dark(
+    0 0 0 1px rgba(29, 31, 34, 0.072),
+    0 0 0 1px rgba(134, 142, 150, 0.072)
+  );
+
+  &[data-active] .tabLabel {
+    color: var(--mantine-color-dark-7);
+    box-shadow: light-dark(
+      0 0 0 1px rgba(29, 31, 34, 0),
+      0 0 0 1px rgba(134, 142, 150, 0)
+    );
+  }
+}
+
+.tabLabel {
+  color: light-dark(var(--mantine-color-dark-4), var(--mantine-color-gray-0));
+  font-weight: 600;
+}

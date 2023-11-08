@@ -1,0 +1,14 @@
+.controls {
+}
+
+.control {
+  background-color: rgba(--mantine-color-dark-7, 1);
+  color: var(--mantine-color-dark-7);
+  border: none;
+  border-radius: var(--mantine-radius-sm);
+  box-shadow: none;
+}
+
+.icon {
+  opacity: 1;
+}

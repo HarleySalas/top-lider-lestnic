@@ -1,0 +1,1 @@
+export { BlurBG } from "./BlurBG";

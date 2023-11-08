@@ -1,0 +1,23 @@
+.footer {
+  /* background-color: var(--mantine-color-dark-9); */
+}
+
+.logo {
+  height: 100%;
+  display: block;
+  fill: var(--mantine-color-gray-0);
+}
+
+.logoLink {
+  display: block;
+  position: relative;
+  height: 1.8rem;
+}
+
+.control {
+  /* color: var(--mantine-color-gray-3); */
+}
+
+.control:hover {
+  color: var(--mantine-color-white);
+}

@@ -1,0 +1,31 @@
+.imageWrapper {
+  /* height: 100%; */
+  width: 90%;
+  position: relative;
+  /* overflow-x: hidden; */
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    width: 75%;
+    max-width: 30rem;
+  }
+}
+
+.image {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.patternWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(2rem, 4rem);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 10rem;
+  height: 10rem;
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    transform: translate(25%, 25%);
+  }
+}

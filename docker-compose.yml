@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  payload:
+    container_name: tll-node
+    image: node:18-alpine
+    ports:
+      - '3000:3000'
+    env_file:
+      - .env
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    working_dir: /home/node/app/
+    command: sh -c "yarn install && yarn dev"
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: tll-mongo
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    env_file:
+      - .env
+    command:
+      - --storageEngine=wiredTiger
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - data:/data/db
+    logging:
+      driver: none
+
+volumes:
+  data:
+  node_modules:

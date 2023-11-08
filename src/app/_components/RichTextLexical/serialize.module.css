@@ -1,0 +1,11 @@
+/* .olRoot {
+  counter-reset: clause;
+}
+
+.olItem {
+  counter-increment: clause;
+}
+
+.olItem:before {
+  content: counter(section) "." counters(clause, ".") ". ";
+} */
