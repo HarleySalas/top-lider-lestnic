@@ -6,12 +6,12 @@ export const GalleryRelationship: Block = {
   interfaceName: "GalleryRelationshipProps",
   labels: {
     singular: {
-      en: "Relationship",
-      ru: "Связь",
+      en: "Gallery",
+      ru: "Галерея",
     },
     plural: {
-      en: "Relationships",
-      ru: "Связи",
+      en: "Gallery",
+      ru: "Галерея",
     },
   },
   fields: [

@@ -21,12 +21,16 @@ import { RenderCustomFormFields } from "./RenderCustomFormFields";
 interface FormProps {
   data: CustomForm;
   modal?: boolean;
+  contact?: boolean;
+  center?: boolean;
   onSuccess?: () => void;
 }
 
 export const Form: React.FC<FormProps> = ({
   data,
   modal = false,
+  contact = false,
+  center = false,
   onSuccess,
 }) => {
   const {
@@ -154,7 +158,7 @@ export const Form: React.FC<FormProps> = ({
         component="form"
         onSubmit={form.onSubmit((values) => handleSubmit(values))}
       >
-        {modal ? null : (
+        {modal || contact ? null : (
           <Title order={2} fw={600} size="xl" mb="md">
             {title}
           </Title>

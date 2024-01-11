@@ -647,6 +647,11 @@ export interface CompanyInfo {
   whatsapp?: string | null;
   address?: string | null;
   yandexMapLink?: string | null;
+  policy?:
+    | {
+        [k: string]: unknown;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

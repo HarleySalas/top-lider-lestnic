@@ -1,6 +1,42 @@
-import PageTemplate from './[...slug]/page'
+import { Metadata, ResolvingMetadata } from "next";
+import PageTemplate from "./[...slug]/page";
+import { resolvePathname } from "./_utilities/resolvePathname";
+import { getPayload } from "./api/getPayload";
 
-export default PageTemplate
+export async function generateMetadata(
+  { params },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { slug } = params;
+  const pathname = resolvePathname(slug);
+
+  const payload = await getPayload();
+
+  try {
+    let page;
+
+    const data = await payload.find({
+      collection: "pages",
+      where: {
+        pathname: {
+          equals: pathname,
+        },
+      },
+      depth: 2,
+    });
+
+    page = data?.docs[0] || null;
+
+    return {
+      title: page?.meta?.title || "TopLiderLestnic",
+      description: page?.meta?.description,
+    };
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export default PageTemplate;
 
 // import { Section } from "@/components/Section";
 // import { CreditCTA } from "@/modules/CreditCTA";

@@ -10,14 +10,13 @@ import { Breadcrumb } from "@payloadcms/plugin-nested-docs/dist/types";
 import { AppShell, RemoveScroll } from "@mantine/core";
 
 const PageClientTemplate = ({ page }: { page: Page }) => {
-  // const { data } = useLivePreview({
-  //   serverURL: process.env.NEXT_PUBLIC_SERVER_URL,
-  //   depth: 2,
-  //   initialData: page,
-  // });
+  const { data } = useLivePreview({
+    serverURL: process.env.NEXT_PUBLIC_SERVER_URL,
+    depth: 2,
+    initialData: page,
+  });
 
-  const data = page;
-
+  // const data = page;
   return (
     <AppShell.Main
       pl={0}

@@ -18,8 +18,8 @@ import { Image } from "@/_components/Image";
 import React from "react";
 import SVG from "../../../../../public/yellow-gradient.svg";
 import classes from "./PrimaryHero.module.css";
-import { HeroProps } from "..";
-import { IconMapPin, IconMapPin2 } from "@tabler/icons-react";
+import { HeroProps } from "../";
+import { IconMapPin2 } from "@tabler/icons-react";
 import { CallToAction } from "@/_components/CallToAction";
 import { ContainedAspectRatio } from "@/_components/ContainedAspectRatio";
 
@@ -40,7 +40,7 @@ export const PrimaryHero: React.FC<HeroProps> = ({ hero }) => {
                 <ThemeIcon variant="transparent">
                   <IconMapPin2 style={{ display: "block" }} strokeWidth={2} />
                 </ThemeIcon>
-                <Text tt="uppercase" fw={600} size="lg">
+                <Text tt="uppercase" fw={600} size="lg" c="dark.5">
                   Москва и МО
                 </Text>
               </Group>
@@ -51,7 +51,7 @@ export const PrimaryHero: React.FC<HeroProps> = ({ hero }) => {
                 {hero.items.map((item) => (
                   <Text
                     key={item?.id}
-                    fw={400}
+                    fw={500}
                     fz="sm"
                     tt="uppercase"
                     c="dimmed"
@@ -61,7 +61,7 @@ export const PrimaryHero: React.FC<HeroProps> = ({ hero }) => {
                 ))}
               </Stack>
 
-              <CallToAction {...hero.callToAction} />
+              <CallToAction {...(hero.callToAction as any)} />
             </Stack>
           </Grid.Col>
           <Grid.Col span={{ base: 12, sm: 6 }}>

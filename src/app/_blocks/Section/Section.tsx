@@ -24,6 +24,8 @@ export const Section: React.FC<SectionProps> = ({
         className={`${classes.background} ${
           background === "gray" && classes.graySection
         }`}
+        py={!sectionTitle.disabled && "5rem"}
+        // pb={sectionTitle.disabled && "5rem"}
       >
         <Container>
           {!sectionTitle?.disabled ? (

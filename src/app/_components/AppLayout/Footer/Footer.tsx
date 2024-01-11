@@ -21,9 +21,9 @@ const Footer = () => {
   const { companyInfo, footer } = useGlobalsContext();
 
   return (
-    <Box className={classes.footer} py="xl" data-mantine-color-scheme="dark">
+    <Box className={classes.footer} py="4rem" data-mantine-color-scheme="dark">
       <Container>
-        <Grid>
+        <Grid gutter="xl">
           <Grid.Col span={{ base: 12, xs: 4, md: 3 }}>
             <Flex
               justify={{ base: "center", xs: "flex-start" }}

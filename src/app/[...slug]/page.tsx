@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import PageClientTemplate from "./page.client";
 import { getPathSegments } from "@/_utilities/getPathSegments";
 import { getPayload } from "@/api/getPayload";
+import { Metadata, ResolvingMetadata } from "next";
 
 export const generateStaticParams = async () => {
   const payload = await getPayload();
@@ -20,6 +21,39 @@ export const generateStaticParams = async () => {
     slug: getPathSegments(page?.pathname),
   }));
 };
+
+export async function generateMetadata(
+  { params },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { slug } = params;
+  const pathname = resolvePathname(slug);
+
+  const payload = await getPayload();
+
+  try {
+    let page;
+
+    const data = await payload.find({
+      collection: "pages",
+      where: {
+        pathname: {
+          equals: pathname,
+        },
+      },
+      depth: 2,
+    });
+
+    page = data?.docs[0] || null;
+
+    return {
+      title: page?.meta?.title || "TopLiderLestnic",
+      description: page?.meta?.description,
+    };
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 const PageTemplate = async ({ params }) => {
   const payload = await getPayload();
@@ -51,6 +85,7 @@ const PageTemplate = async ({ params }) => {
     return notFound();
   }
 
+  console.log(page);
   return (
     <>
       <PageClientTemplate page={page} />

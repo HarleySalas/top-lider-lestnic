@@ -121,7 +121,7 @@ export const hero: Field = {
         ru: "Подзаголовок",
       },
       admin: {
-        condition: (_, { type } = {}) => ["primary"].includes(type),
+        condition: (_, { type } = {}) => ["primary", "contact"].includes(type),
       },
     },
     // richText(null, {
